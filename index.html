@@ -1,11 +1,31 @@
     <html>
     <head>
       <title>Video stream sample</title>
+      <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
     </head>
     <body>
-      <video id="videoPlayer" controls muted="muted" autoplay> 
+      <video id="videoPlayer" controls playsinline autoplay> 
         <source src="http://localhost:3000/video" type="video/mp4">
       </video>
+      <!-- <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <audio id="videoPlayer" controls autoplay> 
+        <source src="http://stream.zeno.fm/60uqv56529duv" type="audio/mp3">
+      </audio> -->
       <script src="index.js"></script>
+      <!-- <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+      <script>
+          (function(){
+            const player = new Plyr('#videoPlayer');
+          })();
+      </script> -->
     </body>
   </html>

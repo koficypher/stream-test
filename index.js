@@ -11,7 +11,7 @@ app.get('/', function(req, res) {
 
 app.get('/video',(req,res) => {
 
-    const path = 'assets/sample.mp4'
+    const path = 'assets/endgame.mkv'
     const stat = fs.statSync(path)
     const fileSize = stat.size
     const range = req.headers.range
@@ -22,7 +22,7 @@ app.get('/video',(req,res) => {
       const end = parts[1]
         ? parseInt(parts[1], 10)
         : fileSize-1
-  
+      //console.log(end);
       const chunksize = (end-start)+1
       const file = fs.createReadStream(path, {start, end})
       const head = {
